@@ -1,1 +1,43 @@
 \section*{Teoretická část}
+Absolutní aktivita vzorku $A$ je celkový počet částic, který ze vzorku vyletí za jednotku času.
+Pokud naměříme ve spektrometru aktivitu $a$, pak platí
+\begin{equation}\label{aktivita}
+A=a \frac{4\pi}{\Omega} \approx a \frac{r^24\pi}{S} \,,
+\end{equation}
+kde $\Omega$ je pokrytý prostorový úhel, $r$ je vzdálenost terčíku od vzorku a $S$ je povrch terčíku. V přiblížení $r^2 \gg S$ platí $\Omega \approx S/r^2$.
+
+
+Předpokládáme, že hustota vzduchu je přímo úměrná tlaku. Potom ionizační ztráty při tlaku $P$ na vzdálenosti $r$ jsou stejné jako ionizační ztráty při atmosférickém tlaku $P_0$ a na vzdálenosti
+\begin{equation}
+x=r\frac{P}{P_0} \,.
+\end{equation}
+Specifické ionizační ztráty definujeme \cite{skripta}
+\begin{equation} \label{f}
+f(T):=-\frac{dT}{dx}=-\frac{P_0}{r}\frac{dT}{dP} \,.
+\end{equation}
+Derivaci $dT/dP$ budeme počítat numericky jako rozdíl dvou vedlejších bodů
+\begin{equation} \label{dTdP}
+\frac{dT}{dP}=\frac{T_{i+1}-T_i}{P_{i+1}-P_{i}} \,.
+\end{equation}
+Zdroj \cite{skripta} udává (po derivaci doletu částic $R$) teoretickou závislost
+\begin{equation} \label{teoreticka}
+f(T)=\frac{2}{3} \frac{1}{\xi \sqrt{T}} \,,
+\end{equation}
+kde $\xi=\SI{0.31}{\cm\MeV}^{-\frac{3}{2}}$ a $T$ v rozmezí \num{4}--\SI{7}{\MeV}.
+
+
+Standardní nejistotu středu píku $\sigma_T$ určíme jako
+\begin{equation}\label{chyba}
+\sigma_T=\frac{\text{FWHM}}{2\sqrt{2\log 2}\sqrt{N}} \,,
+\end{equation}
+kde $N$ je celkový výtěžek náležící píku (\emph{net count}) a FWHM je pološířka píku.
+
+
+Pokud máme vzorek dvou radioaktivních izotopů, u kterých známe poločasy rozpadu $T_{1/2}$, můžeme ze změřených aktivit určit jejich relativní molární podíl
+\begin{equation} \label{Pu}
+\frac{N(1)}{N(2)}=\frac{A(1) T_{1/2}(1)}{A(2) T_{1/2}(2)} \,,
+\end{equation}
+kde $A$ jsou aktivity. Pokud měříme stejný čas, je podíl aktivit rovný podílu výtěžků. Z jejich poměru už můžeme snadno určit relativní zastoupení
+\begin{equation} 
+\eta(1)=\frac{1}{1+\frac{N(2)}{N(1)}} \,, \qquad \qquad \eta(2)=\frac{1}{1+\frac{N(1)}{N(2)}} \,.
+\end{equation}

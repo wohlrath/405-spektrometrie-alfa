@@ -19,7 +19,7 @@
 \usepackage{url}
 
 \usepackage{siunitx}
-\sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
+\sisetup{locale = DE, separate-uncertainty = true} %    kdybych chtel +/-
 
 \usepackage{float}
 \newfloat{graph}{htbp}{grp}
@@ -36,22 +36,26 @@
 
 \bibliography{source}
 
+\newcommand{\Am}{$^{241}$Am}
+\newcommand{\Puosm}{$^{238}$Pu}
+\newcommand{\Pudev}{$^{239}$Pu}
 \begin{document}
 
 \begin{titlepage}
-\includepdf[pages={1}]{./graficos/405-tit.pdf}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
 \end{titlepage}
 
 \section*{Pracovní úkoly}
 \begin{enumerate}
-\item ÚKOLY
+\item Proveďte energetickou kalibraci $\alpha$-spektrometru a určete jeho rozlišení.
+\item Určete absolutní aktivitu kalibračního radioizotopu \Am.
+\item Změřte závislost ionizačních ztrát $\alpha$-částic na tlaku vzduchu $\Delta T=\Delta T(P)$.
+\item Určete specifické ionizační ztráty $\alpha$-částic ve vzduchu při normálním tlaku $-\frac{dT}{dx} = f(T)$. Srovnejte tuto závislost se závislostí získanou pomocí empirické formule pro dolet $\alpha$-částic ve vzduchu za normálních podmínek.
+\item Určete energie $\alpha$-částic vyletujících ze vzorku obsahujícím izotop \Pudev~a příměs izotopu \Puosm~a porovnejte je s tabelovanými hodnotami. Stanovte relativní zastoupení izotopu \Puosm~ve vzorku s přesností lepší než \SI{10}{\percent}, jsou-li $T_{1/2}(^{238}\text{Pu}) = \SI{87.71}{yr}$ a $T_{1/2}(^{239}\text{Pu}) = \SI{24.13e3}{yr}$.
 \end{enumerate}
 
 %Teoretická část
 \input{teorie.tex}
-
-%Podmínky a měřící přístroje
-\input{podminky.tex}
 
 %Výsledky měření
 \input{vysledky.tex}
